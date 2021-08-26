@@ -1,61 +1,23 @@
 @import url("https://fonts.googleapis.com/css?family=Lato&display=swap");
 
 :root {
-  --box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  --box-shadow: 0 10px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 }
 
 * {
   box-sizing: border-box;
 }
-
 body {
-  background-color: #f7f7f7;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
+  background-image: url("./images/budget-bg.jpg");
+  background-position: center;
+
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
   margin: 0;
   font-family: "Lato", sans-serif;
-}
-
-.container {
-  margin: 30px auto;
-  width: 350px;
-}
-
-h1 {
-  letter-spacing: 1px;
-  margin: 0;
-}
-
-h3 {
-  border-bottom: 1px solid #bbb;
-  padding-bottom: 10px;
-  margin: 40px 0 10px;
-}
-
-h4 {
-  margin: 0;
-  text-transform: uppercase;
-}
-
-.inc-exp-container {
-  background-color: #fff;
-  box-shadow: var(--box-shadow);
-  padding: 20px;
-  display: flex;
-  justify-content: space-between;
-  margin: 20px 0;
-}
-
-.inc-exp-container > div {
-  flex: 1;
-  text-align: center;
-}
-
-.inc-exp-container > div:first-of-type {
-  border-right: 1px solid #dedede;
 }
 
 .money {
@@ -63,72 +25,74 @@ h4 {
   letter-spacing: 1px;
   margin: 5px 0;
 }
-
+.minus-ex {
+  color: #271bcf;
+}
 .money.plus {
-  color: #2ecc71;
+  color: #271bcf;
+  padding-left: 10px;
 }
 
 .money.minus {
   color: #c0392b;
+  padding-left: 10px;
 }
-
-label {
-  display: inline-block;
-  margin: 10px 0;
+.balance {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-color: red;
 }
-
-input[type="text"],
-input[type="number"] {
-  border: 1px solid #dedede;
-  border-radius: 2px;
-  display: block;
-  font-size: 16px;
-  padding: 10px;
-  width: 100%;
-}
-
-.btn {
-  cursor: pointer;
+.inc-exp-container {
   box-shadow: var(--box-shadow);
-  color: #fff;
-  border: 0;
-  display: block;
-  font-size: 16px;
-  margin: 10px 0 30px;
-  padding: 10px;
-  width: 100%;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
 }
-
-.btn:focus,
-.delete-btn:focus {
-  outline: 0;
+.income {
+  padding-right: 90px;
 }
-
-.list {
-  list-style-type: none;
-  padding: 0;
-  margin-bottom: 40px;
+.income-list {
+  justify-content: center;
+  color: #1cb850;
+  text-align: center;
 }
-
+.expenses-list {
+  padding-right: 90px;
+  color: #c0392b;
+}
+.income-list .head-exp {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
 .list li {
-  background-color: #fff;
   box-shadow: var(--box-shadow);
-  color: #333;
+  color: rgb(0, 0, 0);
   display: flex;
   justify-content: space-between;
   position: relative;
   padding: 10px;
-  margin: 10px 0;
+  margin: 30px 0;
+}
+.li .minus-ex {
+  border-right: 5px solid #c0392b;
+}
+.list li .plus-in {
+  border-right: 5px solid #271bcf;
+}
+.list li.plus-in {
+  border-right: 5px solid #271bcf;
 }
 
-.list li.plus {
-  border-right: 5px solid #2ecc71;
-}
-
-.list li.minus {
+.list li.minus-ex {
   border-right: 5px solid #c0392b;
 }
 
+.list li .minus-ex {
+  border-right: 5px solid #c0392b;
+}
 .delete-btn {
   cursor: pointer;
   background-color: #e74c3c;
@@ -144,7 +108,43 @@ input[type="number"] {
   opacity: 0;
   transition: opacity 0.3s ease;
 }
-
+.edit-btn {
+  cursor: pointer;
+  background-color: #1cb850;
+  border: 0;
+  color: #fff;
+  font-size: 20px;
+  line-height: 20px;
+  padding: 2px 5px;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translate(-100%, -50%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
 .list li:hover .delete-btn {
   opacity: 1;
+}
+.list li:hover .edit-btn {
+  opacity: 1;
+}
+h1 {
+  letter-spacing: 1px;
+  margin: 0;
+}
+
+h3 {
+  border-bottom: 1px solid #bbb;
+  padding-bottom: 10px;
+  margin: 40px 0 10px;
+}
+
+h4 {
+  margin: 0;
+  text-transform: uppercase;
+}
+label {
+  display: inline-block;
+  margin: 10px 0;
 }
