@@ -11,16 +11,19 @@ password: admin
 <h2> Login Validation </h2>
 
 This will appear when username or password is wrong.
-![LoginValidation](images/LoginValidation.PNG)
+
+![Login](images/LoginValidation.PNG)
 
 <h2> Add Transaction </h2>
-Located at the bottom of the home page, this will enables you to add your transaction whether it is an income or expense.\
-![addTransaction](images/addTransaction.PNG)
+Located at the bottom of the home page, this will enables you to add your transaction whether it is an income or expense.
+
+![Transaction](images/addTransaction.PNG)
 
 
 <h2> Balance and History </h2>
-This part will show your current balance, your income and expense, and your transaction history.\
-In transaction history, There are two colors (red and blue) representing your income and expense.\
+This part will show your current balance, your income and expense, and your transaction history.
+In transaction history, There are two colors (red and blue) representing your income and expense.
+
 ![Balance](images/Balance.PNG)
 
 # Getting Started with Create React App
