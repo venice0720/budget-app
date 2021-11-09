@@ -1,3 +1,28 @@
+<h1> Budget App </h1>
+
+<h2> User Login </h2>
+
+Login your credentials. \
+username: admin \
+password: admin 
+
+![Login](images/Login.PNG)
+
+<h2> Login Validation </h2>
+
+This will appear when username or password is wrong.
+![LoginValidation](images/LoginValidation.PNG)
+
+<h2> Add Transaction </h2>
+Located at the bottom of the home page, this will enables you to add your transaction whether it is an income or expense.\
+![addTransaction](images/addTransaction.PNG)
+
+
+<h2> Balance and History </h2>
+This part will show your current balance, your income and expense, and your transaction history.\
+In transaction history, There are two colors (red and blue) representing your income and expense.\
+![Balance](images/Balance.PNG)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
